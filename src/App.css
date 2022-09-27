@@ -81,3 +81,101 @@ li {
   grid-auto-flow: column;
   gap: 2rem;
 }
+.nft{
+  width: 550px;
+  height: 450px;
+}
+.name{
+  position: relative;
+  bottom: 4rem;
+  color: #fed6e3;
+  padding-left: 2rem;
+  text-shadow: -1px -3px 8px rgba(0,0,0,0.71);}
+.nft img{
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 12px;
+
+}
+.nftlist{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 97vw;
+  padding: 0rem 2rem;
+}
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.776);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.pTag{
+  color: rgba(0, 0, 0, 0.663);
+  font-weight: bold;
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.776);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+.smallNftList{
+  display: grid;
+  grid-auto-flow: column;
+  margin-top: 4rem;
+  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+}
+
+.smallNft{
+  /* width: 550px; */
+  height: 80px;
+  display: grid;
+  grid-auto-flow: column;
+  border: 1px solid rgba(0, 0, 0, 0.375);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+}
+.smallNft img{
+  width: 50px; 
+  height: 50px; 
+  object-fit: cover;
+  border-radius: 12px;
+}
+.categories{
+  display: flex;
+  flex-direction: row;
+  gap: 25rem;
+  margin: 2rem 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.274);
+  padding-top: 4rem;
+  
+}
+.categories1{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
