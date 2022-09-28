@@ -17,11 +17,12 @@ export function NftDetails(){
     return (
         <div>  
             {nft && (
-                <div>
-                    <img src={nft.image} alt="" />
-                    <h1>{nft.name}</h1>
-                    <p>{nft.description}</p>
-                    <p>{nft.price}</p>
+                <div className="nft-details">
+                    <img className="nft-details__image" src={nft.image} alt="" />
+                    <h1 className="nft-details__name">{nft.name}</h1>
+                    <p className="nft-details__description">{nft.description}</p>
+                    <p className="nft-details__price">Price :  {nft.price}</p>
+                    <button className="nft-details__button">Buy</button>
                 </div>
             )}
         </div>
