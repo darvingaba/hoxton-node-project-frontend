@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Routes,Route } from 'react-router-dom'
+import { Routes,Route, Navigate } from 'react-router-dom'
 import './App.css'
 import { Header } from './components/Header'
 import { Home } from './pages/Home'
@@ -35,10 +35,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header setUser={setUser} user={user}/>
 
       <Routes>
         <Route />
+        <Route index element={<Navigate to={"/home"}/>} />
+        <Route path="/home" element={<Home />} />
         <Route
           path="/signup"
           element={<SignUp user={user} setUser={setUser} />}
@@ -47,9 +49,7 @@ function App() {
           path="/signin"
           element={<SignIn user={user} setUser={setUser} />}
         />
-        <Route path="/home" element={<Home />} />
       </Routes>
-
     </div>
   );
 }
