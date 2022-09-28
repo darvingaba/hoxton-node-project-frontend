@@ -182,7 +182,7 @@ li {
   gap: 1rem;
 }
 
-.singleNft{
+/* .singleNft{
   display: flex;
   justify-content: center;
   padding: 2rem 8rem;
@@ -211,7 +211,6 @@ li {
 }
 
 
-/* buy button */
 .descName button {
  position: relative;
  display: inline-block;
@@ -307,5 +306,47 @@ button.learn-more .button-text {
   border-radius: 22px;
   color: white;
   padding: .4rem .8rem;
-}
+} */
 
+.nft-details{
+  display: grid;
+  flex-direction: column;
+  padding: 2rem;
+  gap : 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  border-radius: 12px;
+  margin: 2rem 2rem;
+}
+.nft-details__image{
+  width: 1000px;
+  justify-self: center; 
+  object-fit: cover;
+  border-radius: 12px;
+}
+.nft-details__button{
+  display: grid;
+  font-size: 1.6rem;
+  justify-self: end;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  place-items: center;
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.719);
+}
+.nft-details__button:hover{
+  background-color: rgb(211, 211, 211);
+  color: rgb(0, 0, 0);
+}
+.nft-details__price{
+  display: grid;
+  justify-self: end;
+  place-content: center;
+  padding: 1rem;
+  border: solid 1px ;
+  border-radius: 12px;
+  width: 200px;
+}
