@@ -13,17 +13,26 @@ export function NftDetails(){
         .then(resp=>resp.json())
         .then(nft=>setNft(nft))
     },[params.id])
+    console.log(nft)
 
     return (
-        <div>  
-            {nft && (
-                <div>
-                    <img src={nft.image} alt="" />
-                    <h1>{nft.name}</h1>
-                    <p>{nft.description}</p>
-                    <p>{nft.price}</p>
-                </div>
-            )}
-        </div>
-    )
+      <div>
+        {nft && (
+          <div className="singleNft">
+            <img src={nft.image} alt="" />
+            <div className="descName">
+              <h1 className="nftName">{nft.name}</h1>
+              <p className="nftDesc">{nft.description}</p>
+              <p className="nftPrize">Price {nft.price}</p>
+              <button className="learn-more">
+                <span className="circle" aria-hidden="true">
+                  <span className="icon arrow"></span>
+                </span>
+                <span className="button-text">Purchase</span>
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    );
 }

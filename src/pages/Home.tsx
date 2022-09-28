@@ -74,7 +74,7 @@ export function Home() {
               <img src={nft.image} alt="" />
               <p>{nft.price}</p>
             </li>
-            // </Link>
+            </Link>
           ))}
         </ul>
       </div>
