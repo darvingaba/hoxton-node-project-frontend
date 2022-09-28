@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
-type NFT = {
+import { Link } from "react-router-dom";
+export type NFT = {
   id: number;
   name: string;
   price: string;
@@ -41,8 +42,10 @@ export function Home() {
             >
               {index == current && (
                 <div className="nft">
-                  <img src={nft.image} alt="" />
-                  <h1 className="name">{nft.name}</h1>
+                  <Link to={`/nfts/${nft.id}`}>
+                    <img src={nft.image} alt="" />
+                    <h1 className="name">{nft.name}</h1>
+                  </Link>
                 </div>
               )}
             </li>
@@ -65,11 +68,13 @@ export function Home() {
         </div>
         <ul className="smallNftList">
           {nfts.map((nft) => (
-            <li key={nft.id} className="smallNft">
+            <Link to={`/nfts/${nft.id}`}>
+            <li className="smallNft">
               <p>{nft.id}</p>
               <img src={nft.image} alt="" />
               <p>{nft.price}</p>
             </li>
+            // </Link>
           ))}
         </ul>
       </div>
