@@ -16,25 +16,7 @@ export function NftDetails(){
     console.log(nft)
 
     return (
-    //   <div>
-    //     {nft && (
-    //       <div className="singleNft">
-    //         <img src={nft.image} alt="" />
-    //         <div className="descName">
-    //           <h1 className="nftName">{nft.name}</h1>
-    //           <p className="nftDesc">{nft.description}</p>
-    //           <p className="nftPrize">Price {nft.price}</p>
-    //           <button className="learn-more">
-    //             <span className="circle" aria-hidden="true">
-    //               <span className="icon arrow"></span>
-    //             </span>
-    //             <span className="button-text">Purchase</span>
-    //           </button>
-    //         </div>
-    //       </div>
-    //     )}
-    //   </div>
-    // );
+        
         <div>  
             {nft && (
                 <div className="nft-details">

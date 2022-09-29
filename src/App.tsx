@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Routes,Route, Navigate } from 'react-router-dom'
 import './App.css'
 import { Header } from './components/Header'
+import { About } from './pages/About'
+import { Contact } from './pages/Contact'
 import { Home } from './pages/Home'
 import { NftDetails } from './pages/NftDetails'
 import { SignIn } from './pages/SignIn'
@@ -52,6 +54,8 @@ function App() {
         />
         <Route path="/home" element={<Home />} />
         <Route path="/nfts/:id" element={ <NftDetails /> } />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );

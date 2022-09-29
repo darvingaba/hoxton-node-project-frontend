@@ -182,132 +182,6 @@ li {
   gap: 1rem;
 }
 
-/* .singleNft{
-  display: flex;
-  justify-content: center;
-  padding: 2rem 8rem;
-  gap: 1rem;
-}
-.singleNft img{
-  height: 500px;
-  width: 500px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-.descName{
-  border: 1px solid rgba(0, 0, 0, 0.315);
-  padding: 4rem;
-  border-radius: 12px;
-  place-content: center;
-  height: 500px;
-  width: 500px;
-  gap: 4rem;
-}
-.nftDesc{
-  color: gray;
-}
-.nftName{
-  color: rgba(0, 0, 0, 0.812);
-}
-
-
-.descName button {
- position: relative;
- display: inline-block;
- cursor: pointer;
- outline: none;
- border: 0;
- vertical-align: middle;
- text-decoration: none;
- background: transparent;
- padding: 0;
- font-size: inherit;
- font-family: inherit;
-}
-button.learn-more {
- width: 12rem;
- height: auto;
-}
-
-button.learn-more .circle {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: relative;
- display: block;
- margin: 0;
- width: 3rem;
- height: 3rem;
- background: #282936;
- border-radius: 1.625rem;
-}
-
-button.learn-more .circle .icon {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- bottom: 0;
- margin: auto;
- background: #fff;
-}
-
-button.learn-more .circle .icon.arrow {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- left: 0.625rem;
- width: 1.125rem;
- height: 0.125rem;
- background: none;
-}
-
-button.learn-more .circle .icon.arrow::before {
- position: absolute;
- content: "";
- top: -0.29rem;
- right: 0.0625rem;
- width: 0.625rem;
- height: 0.625rem;
- border-top: 0.125rem solid #fff;
- border-right: 0.125rem solid #fff;
- transform: rotate(45deg);
-}
-
-button.learn-more .button-text {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- padding: 0.75rem 0;
- margin: 0 0 0 1.85rem;
- color: #282936;
- font-weight: 700;
- line-height: 1.6;
- text-align: center;
- text-transform: uppercase;
-}
-
-.descName button:hover .circle {
- width: 100%;
-}
-
-.descName button:hover .circle .icon.arrow {
- background: #fff;
- transform: translate(1rem, 0);
-}
-
-.descName button:hover .button-text {
- color: #fff;
-}
-
-.nftPrize{
-  margin-top: 1rem;
-  background-color: #282936b6;
-  width: 190px;
-  height: 40px;
-  border-radius: 22px;
-  color: white;
-  padding: .4rem .8rem;
-} */
-
 .nft-details{
   display: grid;
   flex-direction: column;
@@ -349,4 +223,98 @@ button.learn-more .button-text {
   border: solid 1px ;
   border-radius: 12px;
   width: 200px;
+}
+.contact-form{
+  display: grid;
+  flex-direction: column;
+  padding: 2rem;
+  gap : 1rem;
+  border-radius: 12px;
+  margin: 2rem 2rem;
+  place-content: center;
+  align-items: center;
+  background-color: #ffffffea;
+}
+.contact-form input{
+  font-size: 2rem;
+  border: none;
+  padding: 1rem;
+  background-color: #ffffff00 ;
+  border-bottom: 2px solid black;
+}
+.contact-form textarea{
+  font-family: sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+  border: none;
+  background-color: #ffffff00 ;
+  border-bottom: 2px solid black;
+}
+.contact-title{
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.contact{
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  background-image: url("https://knowtechie.com/wp-content/uploads/2022/01/bored-ape-nfts.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-buttons{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+  place-content: center;
+}
+.about-buttons button{
+  font-size: 2rem;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  border: none;
+  padding: 1rem;
+  background-color: #9c9c9c1e ;
+  cursor: pointer;
+}
+.about-buttons button img{
+  width: 50px;
+}
+.about{
+  display: grid;
+  place-content: center;
+  gap : 2rem;
+  padding: 1rem;
+  background-image: url("https://knowtechie.com/wp-content/uploads/2022/01/bored-ape-nfts.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-title{
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.about-section__first{
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffffea;
+}
+.about-section__second{
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffffea;
+}
+.about-section__third{
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffffea;
 }
