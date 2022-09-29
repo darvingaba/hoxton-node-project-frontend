@@ -7,7 +7,7 @@ export type NFT = {
   price: string;
   description: string;
   image: string;
-  userId: number | null;
+  userId: number ;
 };
 
 export function Home() {

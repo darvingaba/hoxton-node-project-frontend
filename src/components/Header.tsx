@@ -19,7 +19,9 @@ export function Header({setUser,user}:Props){
           </Link>
           <li>About</li>
           <li>Contact</li>
-          {user ? <li>{user.name}'s Profile</li> : <li>Profile</li>}
+          <Link to={"/profile"}>
+            {user ? <li>{user.name}'s Profile</li> : <li>Profile</li>}
+          </Link>
           <li
             onClick={(e) => {
               // e.preventDefault();

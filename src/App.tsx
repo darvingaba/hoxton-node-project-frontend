@@ -6,15 +6,26 @@ import { Home } from './pages/Home'
 import { NftDetails } from './pages/NftDetails'
 import { SignIn } from './pages/SignIn'
 import { SignUp } from './pages/SignUp'
+export type NFT = {
+  id: number;
+  name: string;
+  price: string;
+  description: string;
+  image: string;
+  userId: number;
+};
 
 export type User = {
   email: string;
   name: string;
   password: string;
+  id:number
+  // nfts:NFT[]
 };
 
 function App() {
   const [user, setUser] = useState<null | User>();
+  console.log(user)
 
   useEffect(()=>{
     if(localStorage.token){
@@ -51,7 +62,7 @@ function App() {
           element={<SignIn user={user} setUser={setUser} />}
         />
         <Route path="/home" element={<Home />} />
-        <Route path="/nfts/:id" element={ <NftDetails /> } />
+        <Route path="/nfts/:id" element={ <NftDetails  user={user}/> } />
       </Routes>
     </div>
   );

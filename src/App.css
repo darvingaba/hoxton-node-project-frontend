@@ -350,3 +350,10 @@ button.learn-more .button-text {
   border-radius: 12px;
   width: 200px;
 }
+
+.purchaseNotification{
+  display: grid;
+  place-items: end;
+  margin-right: 1rem;
+  color: green;
+}
