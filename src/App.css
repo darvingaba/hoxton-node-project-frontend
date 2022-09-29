@@ -318,3 +318,10 @@ li {
   border-radius: 12px;
   background-color: #ffffffea;
 }
+
+.purchaseNotification{
+  display: grid;
+  place-items: end;
+  margin-right: 1rem;
+  color: green;
+}
