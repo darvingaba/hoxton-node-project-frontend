@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { User } from "../App";
 
@@ -22,7 +21,7 @@ export function Header({setUser,user}:Props){
           <Link to={"/profile"}>
             {user ? <li>{user.name}'s Profile</li> : <li>Profile</li>}
           </Link>
-          <li
+          {user?<li
             onClick={(e) => {
               // e.preventDefault();
               // localStorage.removeItem("token");
@@ -31,7 +30,7 @@ export function Header({setUser,user}:Props){
             }}
           >
             Logout
-          </li>
+          </li>:<li>Login</li>}
         </ul>
       </div>
     );

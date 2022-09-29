@@ -69,7 +69,7 @@ export function Home() {
         <ul className="smallNftList">
           {nfts.map((nft) => (
             <Link to={`/nfts/${nft.id}`}>
-            <li className="smallNft">
+            <li key={nft.id} className="smallNft">
               <p>{nft.id}</p>
               <img src={nft.image} alt="" />
               <p>{nft.price}</p>

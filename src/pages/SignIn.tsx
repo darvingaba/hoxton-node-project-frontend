@@ -49,8 +49,7 @@ export function SignIn({user,setUser}:Props){
             />
             <button
             onClick={
-              e=>{
-                // e.preventDefault()
+              ()=>{
                 user ? (window.location.href = "/home") : <p></p>;
               }
             }
