@@ -16,6 +16,7 @@ export type NFT = {
 };
 export function Profile({user,setUser}:Props) {
   const [nfts,setNfts]=useState<NFT[]>([])
+  const p = "";
 
   useEffect(()=>{
     fetch("http://localhost:3456/ownedNfts")
