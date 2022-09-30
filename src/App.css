@@ -42,6 +42,13 @@ li {
   background-color: rgba(128, 128, 128, 0.139);
   border:none
 }
+
+.ownedNftTitle{
+  margin-top: 2rem;
+}
+.ownedNftName{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.501);
+}
 .updateForm button{
   width: 100px;
   padding:.4rem .6rem;

@@ -15,6 +15,21 @@ export type NFT = {
   userId: number;
 };
 export function Profile({user,setUser}:Props) {
+  const [nfts,setNfts]=useState<NFT[]>([])
+
+  useEffect(()=>{
+    fetch("http://localhost:3456/ownedNfts")
+    .then(res=>res.json())
+    .then(resp=>setNfts(resp))
+  },[])
+  // console.log(nfts)
+  const owned=[]
+  for(let nft of nfts){
+    if(nft.userId===user?.id){
+      owned.push(nft)
+    }
+  }
+  console.log(owned)
 
 
   if (user == null) return <h1>No User Found</h1>;
@@ -31,6 +46,13 @@ export function Profile({user,setUser}:Props) {
           />
           <h1>{user?.name}'s Profile</h1>
           <p>{user?.email}</p>
+
+          <h3 className="ownedNftTitle">{user?.name}'s NFT's</h3>
+          {owned.map((nft) => (
+            <li>
+              <p className="ownedNftName">{nft.name}</p>
+            </li>
+          ))}
         </div>
         <form
           className="updateForm"
@@ -55,12 +77,6 @@ export function Profile({user,setUser}:Props) {
           <input type="password" name="password" placeholder="Password" />
           <button>Update</button>
         </form>
-
-          {/* {user?.nfts.map((nft) => (
-            <li key={nft.id}>
-              <p>{nft.name}</p>
-            </li>
-          ))} */}
       </div>
     </div>
   );
