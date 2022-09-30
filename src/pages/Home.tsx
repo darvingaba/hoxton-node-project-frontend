@@ -29,6 +29,7 @@ export function Home() {
       .then((nft) => setNfts(nft));
   }, []);
 
+
   return (
     <div className="container">
       <div className="mainNFT">

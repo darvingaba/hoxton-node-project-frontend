@@ -3,8 +3,8 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { User } from "../App"
 
 type Props = {
-  user: User | null | undefined;
-  setUser: React.Dispatch<React.SetStateAction<User | null | undefined>>
+  user: User | null ;
+  setUser: React.Dispatch<React.SetStateAction<User | null>>
 };
 export type NFT = {
   id: number;
@@ -16,7 +16,9 @@ export type NFT = {
 };
 export function Profile({user,setUser}:Props) {
 
-    const params = useParams()
+
+  if (user == null) return <h1>No User Found</h1>;
+
 
   return (
     <div className="profile">
@@ -33,7 +35,8 @@ export function Profile({user,setUser}:Props) {
         <form
           className="updateForm"
           onSubmit={(e) => {
-            fetch(`http://localhost:3456/users/${params.id}`, {
+            e.preventDefault();
+            fetch(`http://localhost:3456/users/${user.id}`, {
               method: "PATCH",
               headers: {
                 "Content-type": "application/json",
@@ -52,6 +55,12 @@ export function Profile({user,setUser}:Props) {
           <input type="password" name="password" placeholder="Password" />
           <button>Update</button>
         </form>
+
+          {/* {user?.nfts.map((nft) => (
+            <li key={nft.id}>
+              <p>{nft.name}</p>
+            </li>
+          ))} */}
       </div>
     </div>
   );

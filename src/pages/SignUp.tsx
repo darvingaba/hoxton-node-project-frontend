@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { User } from "../App";
 
 type Props = {
-  user : User | null | undefined;
-  setUser:React.Dispatch<React.SetStateAction<User | null | undefined>>;
+  user : User | null ;
+  setUser:React.Dispatch<React.SetStateAction<User | null >>;
 };
 
 

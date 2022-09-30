@@ -2,8 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { User } from "../App";
 
 type Props = {
-  setUser: React.Dispatch<React.SetStateAction<User | null | undefined>>;
-  user: User | null | undefined;
+  setUser: React.Dispatch<React.SetStateAction<User | null>>;
+  user: User | null;
 };
 
 export function Header({setUser,user}:Props){

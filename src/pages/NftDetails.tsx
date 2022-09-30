@@ -4,7 +4,7 @@ import { NFT } from "../pages/Home";
 import { User } from "../App";
 
 type Props={
-    user:User | null | undefined
+    user:User | null 
 }
 
 export function NftDetails({user}:Props){
@@ -52,7 +52,7 @@ export function NftDetails({user}:Props){
             {nft.userId == user?.id ? (
               <p className="purchaseNotification">Purchase successful</p>
             ) : (
-              <p>Hello</p>
+              <p></p>
             )}
           </div>
         )}

@@ -27,7 +27,7 @@ export type User = {
 };
 
 function App() {
-  const [user, setUser] = useState<null | User>();
+  const [user, setUser] = useState<null | User>(null);
   console.log("this is app",user)
 
   useEffect(()=>{
@@ -65,11 +65,11 @@ function App() {
           element={<SignIn user={user} setUser={setUser} />}
         />
         <Route path="/home" element={<Home />} />
-        <Route path="/nfts/:id" element={ <NftDetails user={undefined} /> } />
+        <Route path="/nfts/:id" element={ <NftDetails user={user}  /> } />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/nfts/:id" element={ <NftDetails  user={user}/> } />
-        <Route path='/profile' element={<Profile user={user}/>} />
+        <Route path='/profile' element={<Profile user={user} setUser={setUser}/>} />
       </Routes>
     </div>
   );
