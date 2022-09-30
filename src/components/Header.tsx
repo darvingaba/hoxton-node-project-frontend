@@ -12,7 +12,7 @@ export function Header({setUser,user}:Props){
     return (
       <div className="nav">
         <h1 className="logo">NFT World</h1>
-        <ul>
+        <ul className="headerUl">
           
           <Link to={"/home"}>
             <li>Home</li>
@@ -25,9 +25,6 @@ export function Header({setUser,user}:Props){
           <Link to={"/contact"}>
             <li>Contact</li>
           </Link>
-
-
-          {user ? <li>{user.name}'s Profile</li> : <li>Profile</li>}
           <Link to={"/profile"}>
             {user ? <li>{user.name}'s Profile</li> : <li>Profile</li>}
           </Link>

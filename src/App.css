@@ -18,6 +18,36 @@ li {
   grid-template-rows: 60px 1fr;
   font-family: "Poppins", sans-serif;
 }
+.headerUl li{
+  color: black;
+}
+.profilePic{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profileDetails{
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  padding: 5rem 20rem;
+}
+.updateForm{
+  display: grid;
+}
+.updateForm input{
+  padding: 9px;
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.139);
+  border:none
+}
+.updateForm button{
+  width: 100px;
+  padding:.4rem .6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.505);
+}
 
 .signup {
   display: flex;

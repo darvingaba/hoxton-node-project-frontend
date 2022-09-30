@@ -38,7 +38,7 @@ export function Home() {
           {nfts.map((nft, index) => (
             <li
               className={index === current ? "slide active " : "slide "}
-              key={index}
+              key={nft.id}
             >
               {index == current && (
                 <div className="nft">
